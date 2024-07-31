@@ -28,7 +28,9 @@ pipeline{
       }
     }
     stage('codebuild'){
+      agent {
           label 'slave2'
+      }
       steps{
         sh 'cat /etc/passwd'
       }
